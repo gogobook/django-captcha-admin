@@ -41,6 +41,16 @@ Simple way to add a ReCaptcha_ field to your admin login page.
          ...
      )
 
+5. For routine login, you can import ``loginView`` from ``captcha_admin``::
+     from captcha_admin.views import loginView
+
+
+     urlpatterns = patterns(
+         ...
+         url(r'^accounts/login/', LoginView.as_view()),
+         ...
+     )
+
 That's it!
 
 .. _ReCaptcha: https://www.google.com/recaptcha/
